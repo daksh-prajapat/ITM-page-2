@@ -1956,6 +1956,411 @@ RESPONSIVE - 400px
 
 
 
+.testimonial-section {
+    max-width: 1440px;
+    width: 100%;
+    background: #404093;
+    /* border-radius: 30px; */
+    padding: 1rem 3.5rem;
+    position: relative;
+    overflow: hidden;
+    /* box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8); */
+    min-height: 803px;
+    margin: auto;
+}
+
+/* Background Image Container - Image NECHE (bottom) mein hogi */
+.bg-image-container {
+    position: absolute;
+    bottom: -24px;
+    left: 0px;
+    right: 0;
+    width: 60%;
+    height: 76%;
+    border-radius: 0 0 30px 30px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('./images/girl-2.png');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+/* Gradient Overlay - Image ke upar se transparent to solid */
+.overlay-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 60%;
+    /* background: linear-gradient(180deg, rgba(64, 64, 147, 0) 0%, rgba(64, 64, 147, 0.6) 40%, #404093 85%); */
+    border-radius: 0 0 30px 30px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* BACKGROUND SOLID #404093 - Pure section mein */
+.testimonial-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #404093;
+    z-index: 0;
+    border-radius: 30px;
+}
+
+.main-wrapper {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+}
+
+/* ===== LEFT SIDE - CONTENT ===== */
+.content-left {
+    flex: 0 0 38%;
+    padding-top: 0.5rem;
+}
+
+.sub-heading {
+    font-family: 'Bricolage Grotesque', serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: block;
+}
+
+.main-heading {
+    font-size: 42px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Lora', serif;
+}
+
+.description {
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 1.7;
+    font-weight: 400;
+    /* margin-bottom: 1rem; */
+    max-width: 420px;
+    font-family: 'Bricolage Grotesque', serif;
+
+}
+
+
+/* ===== RIGHT SIDE - CARDS ===== */
+.cards-column {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.testimonial-card {
+    background: rgba(69, 69, 159, 0.85);
+    backdrop-filter: blur(4px);
+    /* border-radius: 16px; */
+    padding: 1.4rem 1.8rem;
+    width: 100%;
+    max-width: 806px;
+    height: 182px;
+    /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); */
+    /* border: 1px solid rgba(255, 255, 255, 0.08); */
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    gap: 1.5rem;
+}
+
+.card-content {
+    flex: 1;
+}
+
+.quote-text {
+    max-width: 504px;
+    font-size: 16px;
+    line-height: 32px;
+    color: #FFFFFF;
+    /* font-style: italic; */
+    font-weight: 400;
+    font-family: 'Bricolage Grotesque', serif;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* border-left: 1px solid rgba(255, 255, 255, 0.15); */
+    padding-left: 1.2rem;
+    min-width: 100px;
+    flex-shrink: 0;
+}
+
+.author-name {
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    font-family: 'Bricolage Grotesque', serif;
+    line-height: 30px;
+}
+
+.author-role {
+    font-size: 14px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-family: 'Bricolage Grotesque', serif;
+    font-weight: 400;
+    white-space: nowrap;
+    line-height: 40px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* 1024px se 1440px tak - SAME LAYOUT, SIRF SIZE KAM */
+@media screen and (max-width: 1440px) and (min-width: 1025px) {
+    .testimonial-section {
+        padding: 1rem 3rem;
+        min-height: 700px;
+    }
+
+    .bg-image-container {
+        width: 58%;
+        height: 80%;
+        bottom: -20px;
+    }
+
+    .content-left {
+        flex: 0 0 35%;
+    }
+
+    .main-heading {
+        font-size: 38px;
+    }
+
+    .testimonial-card {
+        max-width: 700px;
+        min-height: 160px;
+        padding: 1.2rem 1.6rem;
+    }
+
+    .quote-text {
+        max-width: 440px;
+        font-size: 15px;
+        line-height: 28px;
+    }
+
+    .author-name {
+        font-size: 22px;
+    }
+
+    .author-role {
+        font-size: 13px;
+    }
+}
+
+/* Tablet - 1024px tak SAME LAYOUT, SIRF SIZE KAM */
+@media screen and (max-width: 1024px) {
+    .testimonial-section {
+        padding: 1.5rem 20px;
+        min-height: 700px;
+        /* border-radius: 30px; */
+    }
+
+    .testimonial-section::before {
+        border-radius: 30px;
+    }
+
+    /* LAYOUT SAME - Left Right */
+    .main-wrapper {
+        flex-direction: row;
+        gap: 3rem;
+        align-items: flex-start;
+    }
+
+    .content-left {
+        flex: 0 0 38%;
+        order: 1;
+        padding-top: 0.3rem;
+    }
+
+    .cards-column {
+        order: 2;
+        flex: 1;
+        gap: 1rem;
+    }
+
+    .bg-image-container {
+        width: 62%;
+        height: 70%;
+        bottom: -16px;
+        border-radius: 0 0 30px 30px;
+    }
+
+    .bg-image {
+        background-position: center bottom;
+    }
+
+    .overlay-layer {
+        height: 55%;
+        border-radius: 0 0 30px 30px;
+
+    }
+
+    /* SAME FONT SIZES - SIRF SIZE KAM */
+    .sub-heading {
+        font-size: 16px;
+    }
+
+    .main-heading {
+        font-size: 34px;
+    }
+
+    .description {
+        font-size: 13px;
+        max-width: 350px;
+    }
+
+    .testimonial-card {
+        max-width: 91%;
+        height: 155px;
+        padding: 1.2rem 1.5rem;
+        gap: 1rem;
+    }
+
+    .quote-text {
+        max-width: 360px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .author-info {
+        padding-left: 1rem;
+        min-width: 80px;
+    }
+
+    .author-name {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .author-role {
+        font-size: 12px;
+        line-height: 34px;
+    }
+}
+
+/* Mobile - 768px se neeche */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .testimonial-section {
+        padding: 1.5rem 1rem;
+        border-radius: 20px;
+        min-height: auto;
+    }
+
+    .testimonial-section::before {
+        border-radius: 20px;
+    }
+
+    /* MOBILE ME COLUMN ME AA JAYE */
+    .main-wrapper {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .content-left {
+        flex: 0 0 100%;
+        width: 100%;
+        order: 1;
+    }
+
+    .cards-column {
+        order: 2;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .bg-image-container {
+        border-radius: 0 0 20px 20px;
+        width: 100%;
+        height: 35%;
+        bottom: 0;
+    }
+
+    .overlay-layer {
+        border-radius: 0 0 20px 20px;
+        height: 40%;
+        background: linear-gradient(180deg, rgba(64, 64, 147, 0) 0%, rgba(64, 64, 147, 0.7) 40%, #404093 85%);
+    }
+
+    .sub-heading {
+        font-size: 14px;
+    }
+
+    .main-heading {
+        font-size: 28px;
+    }
+
+    .description {
+        font-size: 13px;
+        max-width: 100%;
+    }
+
+    .testimonial-card {
+        min-height: 140px;
+        padding: 1rem 1.2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .quote-text {
+        font-size: 14px;
+        line-height: 26px;
+        max-width: 100%;
+    }
+
+    .author-info {
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        padding-left: 0;
+        padding-top: 0.6rem;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        min-width: auto;
+    }
+
+    .author-name {
+        font-size: 18px;
+        white-space: normal;
+        line-height: 24px;
+    }
+
+    .author-role {
+        font-size: 12px;
+        white-space: normal;
+        line-height: 30px;
+    }
+}
 
 /*==============================
 EXPERTS SECTION
