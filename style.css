@@ -833,7 +833,7 @@ header {
         font-size: 15px;
     }
     .solutions-title {
-        font-size: 22px;
+        font-size: 20px;
     }
     .solutions-desc {
         line-height: 18px;
@@ -1277,7 +1277,7 @@ header {
 
 .testimonial-v2-image {
     position: absolute;
-width: 135%;
+    width: 135%;
     height: 125%;
     object-fit: contain;
 }
@@ -1323,15 +1323,73 @@ width: 135%;
     font-family: 'Bricolage Grotesque', sans-serif;
 }
 
-.testimonial-v2-right {
+/* ============================================
+   TESTIMONIALS - RIGHT SIDE SCROLLABLE
+   ============================================ */
+.testimonial-v2-right-scroll {
     width: 58%;
     position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 760px;
+    padding: 20px 20px 20px 10px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     gap: 22px;
-    padding: 20px;
-    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+.testimonial-v2-right-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.testimonial-v2-right-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+}
+
+.testimonial-v2-right-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.testimonial-v2-right-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.testimonial-v2-right-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.08);
+}
+
+.testimonial-v2-right-scroll .testimonial-v2-card {
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.testimonial-v2-right-scroll .testimonial-v2-bottom-fade {
+    display: none;
+}
+
+/* Desktop only */
+@media (min-width:992px) {
+    .testimonial-v2-right-scroll {
+        display: flex !important;
+    }
+    .testimonial-v2-right {
+        display: none !important;
+    }
+}
+
+/* Mobile/Tablet */
+@media (max-width:991px) {
+    .testimonial-v2-right-scroll {
+        display: none !important;
+    }
+    .testimonial-v2-right {
+        display: none !important;
+    }
 }
 
 .testimonial-v2-card {
@@ -1378,16 +1436,6 @@ width: 135%;
     font-family: 'Bricolage Grotesque', sans-serif;
     font-size: 14px;
     opacity: .8;
-}
-
-.testimonial-v2-bottom-fade {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 170px;
-    pointer-events: none;
-    background: linear-gradient(180deg, rgba(69, 69, 159, 0) 0%, rgba(69, 69, 159, .45) 40%, rgba(69, 69, 159, .82) 70%, #45459F 100%);
 }
 
 .testimonial-v2-slider-wrapper {
@@ -1450,9 +1498,6 @@ width: 135%;
     .testimonial-v2-container {
         display: block;
         min-height: auto;
-    }
-    .testimonial-v2-right {
-        display: none;
     }
     .testimonial-v2-slider-wrapper {
         display: block;
@@ -1588,6 +1633,7 @@ width: 135%;
     }
 }
 
+/* ===== USP SECTION ===== */
 .usp-section {
     width: 100%;
     max-width: 1920px;
@@ -1876,7 +1922,7 @@ width: 135%;
         font-size: 18px;
     }
     .usp-desc {
-        font-size: 11px;
+        font-size: 13px;
         line-height: 18px;
     }
     .usp-left {
@@ -1900,6 +1946,7 @@ width: 135%;
     }
 }
 
+/* ===== GALLERY SECTION ===== */
 .gallery-section {
     width: 100%;
     padding: 85px 0 75px;
@@ -1957,6 +2004,7 @@ width: 135%;
     display: block;
 }
 
+/* ===== FIX: GALLERY BUTTONS ALWAYS VISIBLE ===== */
 .gallery-btn {
     position: absolute;
     bottom: -18%;
@@ -1969,8 +2017,14 @@ width: 135%;
     color: #fff;
     cursor: pointer;
     font-size: 22px;
-    z-index: 100;
+    z-index: 10 !important;
     transition: .3s;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
 }
 
 .gallery-btn:hover {
@@ -2071,11 +2125,12 @@ width: 135%;
     .gallery-heading p {
         width: 867px;
         max-width: 89%;
-        font-size: 12px;
+        font-size: 13px;
         line-height: 18px;
     }
 }
 
+/* ===== EXPERTS SECTION ===== */
 .experts-section {
     width: 100%;
     max-width: 1920px;
@@ -2360,6 +2415,7 @@ width: 135%;
     }
 }
 
+/* ===== MEGA MENU ===== */
 .has-mega-menu {
     position: static;
 }
@@ -2576,6 +2632,7 @@ width: 135%;
     border-radius: 20px;
 }
 
+/* ===== FOOTER ===== */
 .footer {
     position: relative;
     width: 100%;
@@ -3121,8 +3178,6 @@ width: 135%;
 
 /* 2. Paragraphs/Text - Fade In + Slide Up */
 .animate-text {
-    /* opacity: 0;
-    transform: translateY(10px); */
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
@@ -3143,12 +3198,10 @@ width: 135%;
     transform: scale(1);
 }
 
-/* 4. Buttons - Scale on Hover (already have hover, adding subtle scale) */
+/* 4. Buttons - Scale on Hover */
 .animate-btn {
     transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
-
-
 
 /* 5. Cards/Sections - Stagger effect via JS delay */
 .animate-on-scroll {
@@ -3186,7 +3239,6 @@ width: 135%;
 }
 
 .animate-btn.gallery-btn:hover {
-    /* transform: scale(1.05) !important; */
     background: #22226b !important;
 }
 
@@ -3294,5 +3346,4 @@ img.animate-image,
 video.animate-image,
 iframe.animate-image {
     display: block;
-    /* max-width: 100%; */
 }

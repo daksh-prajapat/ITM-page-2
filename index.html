@@ -564,6 +564,9 @@
         </div>
     </section>
 
+    <!-- ============================================
+    TESTIMONIALS SECTION - UPDATED WITH 6 CARDS
+    ============================================ -->
     <section class="testimonial-v2-section">
         <div class="testimonial-v2-container">
             <div class="testimonial-v2-left animate-on-scroll">
@@ -580,7 +583,11 @@
                 </div>
                 <img src="./images/girl-2.png" alt="" class="testimonial-v2-image animate-image">
             </div>
-            <div class="testimonial-v2-right">
+
+            <!-- RIGHT SIDE - SCROLLABLE WITH 6 CARDS -->
+            <div class="testimonial-v2-right-scroll">
+
+                <!-- Card 1 -->
                 <div class="testimonial-v2-card animate-on-scroll">
                     <div class="testimonial-v2-card-text animate-text">
                         Beautiful tents and tireless service from Swati Taluka.
@@ -594,6 +601,8 @@
                         <span class="animate-text">Photographer</span>
                     </div>
                 </div>
+
+                <!-- Card 2 -->
                 <div class="testimonial-v2-card animate-on-scroll">
                     <div class="testimonial-v2-card-text animate-text">
                         Beautiful tents and tireless service from Swati Taluka.
@@ -607,6 +616,8 @@
                         <span class="animate-text">Photographer</span>
                     </div>
                 </div>
+
+                <!-- Card 3 -->
                 <div class="testimonial-v2-card animate-on-scroll">
                     <div class="testimonial-v2-card-text animate-text">
                         Beautiful tents and tireless service from Swati Taluka.
@@ -620,6 +631,8 @@
                         <span class="animate-text">Photographer</span>
                     </div>
                 </div>
+
+                <!-- Card 4 -->
                 <div class="testimonial-v2-card animate-on-scroll">
                     <div class="testimonial-v2-card-text animate-text">
                         Beautiful tents and tireless service from Swati Taluka.
@@ -633,10 +646,38 @@
                         <span class="animate-text">Photographer</span>
                     </div>
                 </div>
-                <div class="testimonial-v2-bottom-fade"></div>
+
+                <!-- Card 5 - EXTRA -->
+                <div class="testimonial-v2-card animate-on-scroll">
+                    <div class="testimonial-v2-card-text animate-text">
+                        Amazing quality and attention to detail! The team at Indian Tent Manufacturer
+                        went above and beyond to create the perfect glamping experience for our resort.
+                        Highly recommended for anyone looking for premium safari tents.
+                    </div>
+                    <div class="testimonial-v2-user">
+                        <h4 class="animate-heading">JOHN SMITH</h4>
+                        <span class="animate-text">Resort Owner</span>
+                    </div>
+                </div>
+
+                <!-- Card 6 - EXTRA -->
+                <div class="testimonial-v2-card animate-on-scroll">
+                    <div class="testimonial-v2-card-text animate-text">
+                        We've been using Indian Tent Manufacturer's products for our events for years.
+                        Their craftsmanship is unmatched and the customer service is exceptional.
+                        Every tent tells a story of quality and tradition.
+                    </div>
+                    <div class="testimonial-v2-user">
+                        <h4 class="animate-heading">SARAH WILLIAMS</h4>
+                        <span class="animate-text">Event Planner</span>
+                    </div>
+                </div>
+
             </div>
+            <!-- END RIGHT SCROLL -->
         </div>
 
+        <!-- MOBILE/TABLET SLIDER -->
         <div class="testimonial-v2-slider-wrapper">
             <div class="swiper testimonialV2Swiper">
                 <div class="swiper-wrapper">
@@ -893,166 +934,167 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-       // Mobile Menu Toggle
-const hamburger = document.getElementById('hamburger');
-const navLeft = document.getElementById('nav-menu');
-const navRight = document.getElementById('nav-right-menu');
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLeft = document.getElementById('nav-menu');
+        const navRight = document.getElementById('nav-right-menu');
 
-hamburger.addEventListener('click', function () {
-    navLeft.classList.toggle('active');
-    navRight.classList.toggle('active');
-    hamburger.classList.toggle('active');
-});
+        hamburger.addEventListener('click', function() {
+            navLeft.classList.toggle('active');
+            navRight.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
 
-// Mega Menu Tabs
-const menuItems = document.querySelectorAll(".menu-item");
-const tabContents = document.querySelectorAll(".tab-content");
+        // Mega Menu Tabs
+        const menuItems = document.querySelectorAll(".menu-item");
+        const tabContents = document.querySelectorAll(".tab-content");
 
-menuItems.forEach(item => {
-    item.addEventListener("click", function (e) {
-        e.preventDefault();
-        menuItems.forEach(link => link.classList.remove("active"));
-        tabContents.forEach(tab => tab.classList.remove("active"));
-        this.classList.add("active");
-        document.getElementById(this.dataset.tab).classList.add("active");
-    });
-});
+        menuItems.forEach(item => {
+            item.addEventListener("click", function(e) {
+                e.preventDefault();
+                menuItems.forEach(link => link.classList.remove("active"));
+                tabContents.forEach(tab => tab.classList.remove("active"));
+                this.classList.add("active");
+                document.getElementById(this.dataset.tab).classList.add("active");
+            });
+        });
 
-window.addEventListener("load", () => {
-    document.querySelector(".menu-item").classList.add("active");
-    document.querySelector(".tab-content").classList.add("active");
-});
+        window.addEventListener("load", () => {
+            document.querySelector(".menu-item").classList.add("active");
+            document.querySelector(".tab-content").classList.add("active");
+        });
 
-// Swiper - Solutions
-const solutionSwiper = new Swiper(".solutionSwiper", {
-    loop: true,
-    slidesPerView: 3,
-    slidesPerGroup: 1,
-    spaceBetween: 20,
-    speed: 700,
-    grabCursor: true,
-    autoplay: { delay: 2500, disableOnInteraction: false, pauseOnMouseEnter: true },
-    breakpoints: {
-        0: { slidesPerView: 2, slidesPerGroup: 1, spaceBetween: 15 },
-        577: { slidesPerView: 3, slidesPerGroup: 1, spaceBetween: 20 }
-    }
-});
-
-// Manufacturer Slider
-const images = ["./images/t-1.png", "./images/g-1.png", "./images/usp.png"];
-const leftImg = document.getElementById("sliderLeft");
-const rightImg = document.getElementById("sliderRight");
-const dots = document.querySelectorAll(".dot");
-let current = 0;
-
-function changeSlide() {
-    current = (current + 1) % images.length;
-    leftImg.style.backgroundImage = `url(${images[current]})`;
-    rightImg.style.backgroundImage = `url(${images[current]})`;
-    dots.forEach(dot => dot.classList.remove("active"));
-    dots[current].classList.add("active");
-}
-
-leftImg.style.backgroundImage = `url(${images[0]})`;
-rightImg.style.backgroundImage = `url(${images[0]})`;
-setInterval(changeSlide, 2600);
-
-// Swiper - Gallery
-const gallerySwiper = new Swiper(".gallerySwiper", {
-    loop: true,
-    speed: 900,
-    slidesPerGroup: 1,
-    spaceBetween: 10,
-    grabCursor: false,
-    allowTouchMove: false,
-    autoplay: { delay: 2000, disableOnInteraction: false },
-    navigation: { nextEl: ".gallery-next", prevEl: ".gallery-prev" },
-    breakpoints: {
-        0: { slidesPerView: 1, allowTouchMove: true },
-        768: { slidesPerView: 2, allowTouchMove: false },
-        1024: { slidesPerView: 2.3, allowTouchMove: false }
-    }
-});
-
-// Swiper - Testimonial V2
-const testimonialV2Swiper = new Swiper(".testimonialV2Swiper", {
-    loop: true,
-    speed: 900,
-    spaceBetween: 20,
-    slidesPerGroup: 1,
-    grabCursor: true,
-    watchOverflow: true,
-    autoplay: { delay: 2000, disableOnInteraction: false, pauseOnMouseEnter: true },
-    navigation: { nextEl: ".testimonial-v2-next", prevEl: ".testimonial-v2-prev" },
-    breakpoints: {
-        0: { slidesPerView: 1, spaceBetween: 15, allowTouchMove: true },
-        577: { slidesPerView: 2, spaceBetween: 20, allowTouchMove: true },
-        992: { enabled: false }
-    }
-});
-
-// ============================================
-// 🚀 IMPROVED ANIMATION - FAST LOADING
-// ============================================
-document.addEventListener('DOMContentLoaded', function () {
-    
-    // Sab elements jo animate hone hain
-    const animElements = document.querySelectorAll(
-        '.animate-on-scroll, .animate-heading, .animate-text, .animate-image, .animate-btn'
-    );
-
-    // Pehle se visible elements ko turant visible karo (jo already viewport mein hain)
-    const preloadElements = [];
-    const restElements = [];
-
-    animElements.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        const isVisible = rect.top < window.innerHeight - 50;
-        if (isVisible) {
-            preloadElements.push(el);
-        } else {
-            restElements.push(el);
-        }
-    });
-
-    // Jo visible hain unhe turant dikhao (bina delay ke)
-    preloadElements.forEach((el, index) => {
-        setTimeout(() => {
-            el.classList.add('visible');
-        }, index * 30); // Sirf 30ms ka gap — bahut fast
-    });
-
-    // Baaki elements ke liye Intersection Observer
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => {
-                    entry.target.classList.add('visible');
-                }, index * 50); // 50ms gap — fast
-                observer.unobserve(entry.target);
+        // Swiper - Solutions
+        const solutionSwiper = new Swiper(".solutionSwiper", {
+            loop: true,
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+            spaceBetween: 20,
+            speed: 700,
+            grabCursor: true,
+            autoplay: { delay: 2500, disableOnInteraction: false, pauseOnMouseEnter: true },
+            breakpoints: {
+                0: { slidesPerView: 2, slidesPerGroup: 1, spaceBetween: 15 },
+                577: { slidesPerView: 3, slidesPerGroup: 1, spaceBetween: 20 }
             }
         });
-    }, { 
-        threshold: 0.1,           // 10% visible hote hi trigger
-        rootMargin: '0px 0px -30px 0px' 
-    });
 
-    restElements.forEach(el => observer.observe(el));
+        // Manufacturer Slider
+        const images = ["./images/t-1.png", "./images/g-1.png", "./images/usp.png"];
+        const leftImg = document.getElementById("sliderLeft");
+        const rightImg = document.getElementById("sliderRight");
+        const dots = document.querySelectorAll(".dot");
+        let current = 0;
 
-    // Extra: Agar koi element already visible ho but observer miss kar gaya, toh force check
-    setTimeout(() => {
-        document.querySelectorAll('.animate-on-scroll, .animate-heading, .animate-text, .animate-image, .animate-btn')
-            .forEach(el => {
-                if (!el.classList.contains('visible')) {
-                    const rect = el.getBoundingClientRect();
-                    if (rect.top < window.innerHeight - 30) {
-                        el.classList.add('visible');
-                    }
+        function changeSlide() {
+            current = (current + 1) % images.length;
+            leftImg.style.backgroundImage = `url(${images[current]})`;
+            rightImg.style.backgroundImage = `url(${images[current]})`;
+            dots.forEach(dot => dot.classList.remove("active"));
+            dots[current].classList.add("active");
+        }
+
+        leftImg.style.backgroundImage = `url(${images[0]})`;
+        rightImg.style.backgroundImage = `url(${images[0]})`;
+        setInterval(changeSlide, 2600);
+
+        // Swiper - Gallery
+        const gallerySwiper = new Swiper(".gallerySwiper", {
+            loop: true,
+            speed: 900,
+            slidesPerGroup: 1,
+            spaceBetween: 10,
+            grabCursor: false,
+            allowTouchMove: false,
+            autoplay: { delay: 2000, disableOnInteraction: false },
+            navigation: { nextEl: ".gallery-next", prevEl: ".gallery-prev" },
+            breakpoints: {
+                0: { slidesPerView: 1, allowTouchMove: true },
+                768: { slidesPerView: 2, allowTouchMove: false },
+                1024: { slidesPerView: 2.3, allowTouchMove: false }
+            }
+        });
+
+        // Swiper - Testimonial V2
+        const testimonialV2Swiper = new Swiper(".testimonialV2Swiper", {
+            loop: true,
+            speed: 900,
+            spaceBetween: 20,
+            slidesPerGroup: 1,
+            grabCursor: true,
+            watchOverflow: true,
+            autoplay: { delay: 2000, disableOnInteraction: false, pauseOnMouseEnter: true },
+            navigation: { nextEl: ".testimonial-v2-next", prevEl: ".testimonial-v2-prev" },
+            breakpoints: {
+                0: { slidesPerView: 1, spaceBetween: 15, allowTouchMove: true },
+                577: { slidesPerView: 2, spaceBetween: 20, allowTouchMove: true },
+                992: { enabled: false }
+            }
+        });
+
+        // ============================================
+        // 🚀 IMPROVED ANIMATION - FAST LOADING
+        // ============================================
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // Sab elements jo animate hone hain
+            const animElements = document.querySelectorAll(
+                '.animate-on-scroll, .animate-heading, .animate-text, .animate-image, .animate-btn'
+            );
+
+            // Pehle se visible elements ko turant visible karo
+            const preloadElements = [];
+            const restElements = [];
+
+            animElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight - 50;
+                if (isVisible) {
+                    preloadElements.push(el);
+                } else {
+                    restElements.push(el);
                 }
             });
-    }, 300); // 300ms baad ek baar check kar lo
 
-});    </script>
+            // Jo visible hain unhe turant dikhao
+            preloadElements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add('visible');
+                }, index * 30);
+            });
+
+            // Baaki elements ke liye Intersection Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, index * 50);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -30px 0px'
+            });
+
+            restElements.forEach(el => observer.observe(el));
+
+            // Extra check
+            setTimeout(() => {
+                document.querySelectorAll('.animate-on-scroll, .animate-heading, .animate-text, .animate-image, .animate-btn')
+                    .forEach(el => {
+                        if (!el.classList.contains('visible')) {
+                            const rect = el.getBoundingClientRect();
+                            if (rect.top < window.innerHeight - 30) {
+                                el.classList.add('visible');
+                            }
+                        }
+                    });
+            }, 300);
+
+        });
+    </script>
 
 </body>
 
