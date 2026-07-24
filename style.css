@@ -1,6 +1,4 @@
-/*==============================
-FONTS & RESET
-==============================*/
+
 
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
@@ -15,9 +13,6 @@ body {
     font-family: 'Lora', serif;
 }
 
-/*==============================
-HEADER
-==============================*/
 
 header {
     width: 100%;
@@ -144,9 +139,7 @@ header {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/*==============================
-RESPONSIVE - 1024px (Menu convert ho jaye)
-==============================*/
+
 
 @media(max-width:1024px) {
 
@@ -161,7 +154,7 @@ RESPONSIVE - 1024px (Menu convert ho jaye)
         order: 3;
     }
 
-    /* Logo - Left ho jaye (kyunki menu bar aa gaya) */
+
     .logo {
         flex: 0 0 auto;
         order: 1;
@@ -175,10 +168,10 @@ RESPONSIVE - 1024px (Menu convert ho jaye)
 
     .nav-right {
         order: 4;
-        /* Right side menu ke liye */
+        
     }
 
-    /* Mobile Menu - Right se open */
+   
     .nav-left,
     .nav-right {
         position: fixed;
@@ -232,9 +225,7 @@ RESPONSIVE - 1024px (Menu convert ho jaye)
 
 }
 
-/*==============================
-HERO PAGE 2
-==============================*/
+
 
 .hero-page2 {
     width: 100%;
@@ -332,16 +323,14 @@ HERO PAGE 2
 
 
 
-/*====================================
-GLAMPING
-====================================*/
+
 
 .glamping-section {
     width: 100%;
     max-width: 1920px;
     margin: auto;
-    padding: 15px 55px;
-    background: #FDF9F4;
+    padding: 15px 0;
+    /* background: #FDF9F4; */
 }
 
 .glamping-container {
@@ -349,9 +338,7 @@ GLAMPING
     margin: auto;
 }
 
-/*----------------------
-Rows
------------------------*/
+
 
 .glamping-row {
     width: 88%;
@@ -367,21 +354,20 @@ Rows
 
 .glamping-row.featured {
     width: 100%;
+    padding-left: 40px;
     padding-right: 85px;
 }
 
-/*----------------------
-Content
------------------------*/
+
 
 .glamping-content {
     flex: 1;
-    max-width: 520px;
+    max-width: 410px;
 }
 
 .glamping-content-1 {
     flex: 1;
-    max-width: 560px;
+    max-width: 550px;
 }
 
 .glamping-tag {
@@ -438,9 +424,7 @@ Content
     margin-top: 28px;
 }
 
-/*----------------------
-Image
------------------------*/
+
 
 .glamping-image {
     flex: 1;
@@ -450,7 +434,7 @@ Image
 
 .glamping-image img {
     width: 100%;
-    max-width: 520px;
+    max-width: 560px;
     height: 360px;
     object-fit: cover;
     display: block;
@@ -459,13 +443,11 @@ Image
 /* Smaller Rows */
 
 .glamping-row:not(.featured) .glamping-image img {
-    max-width: 520px;
+    max-width: 560px;
     height: 320px;
 }
 
-/*==========================
-1440 - 1024
-==========================*/
+
 
 @media(max-width:1440px) {
 
@@ -491,15 +473,14 @@ Image
 
 }
 
-/*==========================
-Tablet
-==========================*/
+
 
 @media(max-width:1024px) {
 
     .glamping-row,
     .glamping-row.featured {
-
+        padding-left: 0;
+        padding-right: 0px;
         width: 100%;
         flex-direction: column;
         text-align: center;
@@ -532,14 +513,12 @@ Tablet
 
 }
 
-/*==========================
-Mobile
-==========================*/
+
 
 @media(max-width:576px) {
 
     .glamping-section {
-        padding: 45px 18px;
+        padding: 5px 18px;
     }
 
     .glamping-row {
@@ -563,9 +542,6 @@ Mobile
 
 
 
-/*====================================
-CTA SECTION
-====================================*/
 
 .cta-section {
     position: relative;
@@ -582,9 +558,7 @@ CTA SECTION
     background: #000;
 }
 
-/*==========================
-Background Image
-==========================*/
+
 
 .cta-bg {
 
@@ -601,9 +575,7 @@ Background Image
 
 }
 
-/*==========================
-Overlay
-==========================*/
+
 
 .cta-overlay {
 
@@ -617,9 +589,7 @@ Overlay
 
 }
 
-/*==========================
-Side Frames
-==========================*/
+
 
 .cta-frame {
     position: absolute;
@@ -645,9 +615,6 @@ Side Frames
     border-left: none;
 }
 
-/*==========================
-Content
-==========================*/
 
 .cta-content {
 
@@ -664,9 +631,7 @@ Content
 
 }
 
-/*==========================
-Title
-==========================*/
+
 
 .cta-title {
 
@@ -683,9 +648,6 @@ Title
 
 }
 
-/*==========================
-Description
-==========================*/
 
 .cta-desc {
 
@@ -703,9 +665,6 @@ Description
 
 }
 
-/*==========================
-Button
-==========================*/
 
 .cta-btn {
 
@@ -736,9 +695,6 @@ Button
 
 }
 
-/*=====================================
-1440px
-=====================================*/
 
 @media(max-width:1440px) {
 
@@ -762,9 +718,7 @@ Button
 
 }
 
-/*=====================================
-1024px
-=====================================*/
+
 
 @media(max-width:1024px) {
 
@@ -788,9 +742,7 @@ Button
 
 }
 
-/*=====================================
-768px
-=====================================*/
+
 
 @media(max-width:768px) {
 
@@ -808,9 +760,7 @@ Button
 
 }
 
-/*=====================================
-576px
-=====================================*/
+
 
 @media(max-width:576px) {
 
@@ -851,8 +801,6 @@ Button
     }
 
 }
-
-
 
 
 @media(max-width:425px) {
@@ -910,9 +858,7 @@ Button
 
 }
 
-/*==========================
-Solutions
-==========================*/
+
 
 .solutions-section {
 
@@ -947,7 +893,7 @@ Solutions
     margin: 12px 0 16px;
     text-transform: uppercase;
     font-family: "Lora", serif;
-    font-size: 44px;
+    font-size: 42px;
     font-weight: 400;
     color: #18171C;
 
@@ -1152,9 +1098,19 @@ Solutions
     }
 
     .solutions-section {
-        margin: 40px auto 0;
-        padding: 30px 20px;
+        margin: 50px auto 0;
+        padding: 0px 20px;
 
+    }
+
+    .youtube-tag {
+
+        width: 100px;
+        height: 25px;
+    }
+
+    .youtube-tag span {
+        font-size: 12px;
     }
 
     .solutions-desc {
@@ -1169,14 +1125,13 @@ Solutions
 @media(max-width:576px) {
 
     .solution-name {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .play-btn {
-
-        width: 58px;
-        height: 58px;
-        font-size: 18px;
+        width: 40px;
+        height: 30px;
+        font-size: 15px;
 
     }
 
@@ -1193,9 +1148,6 @@ Solutions
 
 
 
-/*====================================
-MANUFACTURER SECTION
-====================================*/
 
 .manufacturer-section {
     width: 100%;
@@ -1221,9 +1173,7 @@ MANUFACTURER SECTION
 
 }
 
-/*==========================
-LEFT CONTENT
-==========================*/
+
 
 .manufacturer-content {
 
@@ -1242,7 +1192,7 @@ LEFT CONTENT
 
     text-transform: uppercase;
 
-    color: #4D4FB4;
+    color: #404093;
 
     margin-bottom: 18px;
 
@@ -1297,9 +1247,7 @@ LEFT CONTENT
 
 }
 
-/*==========================
-RIGHT
-==========================*/
+
 
 .manufacturer-slider {
 
@@ -1340,9 +1288,7 @@ RIGHT
 
 }
 
-/*==========================
-IMAGE
-==========================*/
+
 
 .split-image {
 
@@ -1375,9 +1321,6 @@ IMAGE
 
 }
 
-/*==========================
-DOTS
-==========================*/
 
 .slider-dots {
 
@@ -1425,9 +1368,7 @@ DOTS
 
 }
 
-/*==================================
-1440
-==================================*/
+
 
 @media(max-width:1440px) {
 
@@ -1448,10 +1389,6 @@ DOTS
 }
 
 
-
-/*==================================
-TABLET
-==================================*/
 
 @media(max-width:1024px) {
 
@@ -1504,15 +1441,13 @@ TABLET
 
 }
 
-/*==================================
-MOBILE
-==================================*/
+
 
 @media(max-width:576px) {
 
     .manufacturer-section {
 
-        padding: 40px 16px;
+        padding: 0px 16px;
 
     }
 
@@ -1551,10 +1486,7 @@ MOBILE
 
 }
 
-/*=========================================
-        CUSTOMIZE SECTION   
-    /* background: #FBF8F3;
-=========================================*/
+
 
 .customize-section {
     width: 100%;
@@ -1597,9 +1529,7 @@ MOBILE
     font-family: "Bricolage Grotesque", sans-serif;
 }
 
-/*=========================================
-        WRAPPER
-=========================================*/
+
 
 .customize-wrapper {
     width: 100%;
@@ -1610,9 +1540,7 @@ MOBILE
     align-items: center;
 }
 
-/*=========================================
-        DESKTOP IMAGE
-=========================================*/
+
 
 .customize-desktop-image {
     width: 100%;
@@ -1628,9 +1556,6 @@ MOBILE
     height: auto;
 }
 
-/*=========================================
-        MOBILE IMAGE
-=========================================*/
 
 .customize-mobile-image {
     display: none;
@@ -1647,9 +1572,7 @@ MOBILE
     height: auto;
 }
 
-/*=========================================
-        ENQUIRE BUTTON
-=========================================*/
+
 
 .customize-enquiry {
     width: 100%;
@@ -1681,9 +1604,7 @@ MOBILE
 
 }
 
-/*=========================================
-        BUTTONS
-=========================================*/
+
 
 .customize-buttons {
 
@@ -1730,9 +1651,7 @@ MOBILE
 
 }
 
-/*=========================================
-        TABLET
-=========================================*/
+
 
 @media (max-width:991px) {
 
@@ -1799,9 +1718,7 @@ MOBILE
 
     }
 
-    /*=========================
-SHOW BUTTONS
-=========================*/
+
 
     .customize-buttons {
 
@@ -1848,15 +1765,12 @@ SHOW BUTTONS
 }
 
 
-/*=========================================
-        MOBILE
-=========================================*/
 
 @media (max-width:576px) {
 
     .customize-section {
 
-        padding: 60px 15px;
+        padding: 0px 15px;
 
     }
 
@@ -1883,9 +1797,7 @@ SHOW BUTTONS
 
     }
 
-    /*======================
-Buttons
-======================*/
+
 
     .customize-buttons {
 
@@ -1930,15 +1842,13 @@ Buttons
 
 }
 
-/*=========================================
-      TESTIMONIAL V2 - COMMON CSS
-==========================================*/
+
 
 .testimonial-v2-section {
     width: 100%;
     max-width: 1920px;
     margin: 70px auto;
-    background: #45459F;
+    background: #404093;
     position: relative;
     overflow: hidden;
     padding: 0;
@@ -1950,9 +1860,6 @@ Buttons
     min-height: 760px;
 }
 
-/*=========================================
-LEFT SIDE
-==========================================*/
 
 .testimonial-v2-left {
     width: 42%;
@@ -2018,9 +1925,7 @@ LEFT SIDE
     font-family: 'Bricolage Grotesque', sans-serif;
 }
 
-/*=========================================
-RIGHT SIDE
-==========================================*/
+
 
 .testimonial-v2-right {
     width: 58%;
@@ -2033,9 +1938,6 @@ RIGHT SIDE
     overflow: hidden;
 }
 
-/*=========================================
-CARD
-==========================================*/
 
 .testimonial-v2-card {
 
@@ -2105,9 +2007,6 @@ CARD
     opacity: .8;
 }
 
-/*=========================================
-BOTTOM FADE
-==========================================*/
 
 .testimonial-v2-bottom-fade {
 
@@ -2131,9 +2030,6 @@ BOTTOM FADE
             #45459F 100%);
 }
 
-/*=========================================
-SLIDER (Hidden on Desktop)
-==========================================*/
 
 .testimonial-v2-slider-wrapper {
 
@@ -2216,9 +2112,7 @@ SLIDER (Hidden on Desktop)
     }
 }
 
-/*=========================================
-        TABLET (991px)
-==========================================*/
+
 
 @media (max-width:991px) {
 
@@ -2238,9 +2132,7 @@ SLIDER (Hidden on Desktop)
         padding: 40px 25px 70px;
     }
 
-    /*==========================
-LEFT
-==========================*/
+
 
     .testimonial-v2-left {
 
@@ -2305,9 +2197,6 @@ LEFT
         line-height: 1.8;
     }
 
-    /*==========================
-SLIDER CARD
-==========================*/
 
     .testimonialV2Swiper {
 
@@ -2368,14 +2257,12 @@ SLIDER CARD
 
 }
 
-/*=========================================
-        MOBILE (576px)
-==========================================*/
+
 
 @media (max-width:576px) {
 
     .testimonial-v2-section {
-
+        margin: 50px auto;
         padding: 0;
     }
 
@@ -2474,11 +2361,6 @@ SLIDER CARD
 
 
 
-
-/*==============================
-USP SECTION
-==============================*/
-
 .usp-section {
     width: 100%;
     max-width: 1920px;
@@ -2493,9 +2375,7 @@ USP SECTION
     margin: 0 auto;
 }
 
-/*==============================
-HEADING
-==============================*/
+
 
 .usp-heading {
     text-align: center;
@@ -2531,9 +2411,7 @@ HEADING
     margin: 0 auto;
 }
 
-/*==============================
-BOTTOM
-==============================*/
+
 
 .usp-bottom {
     max-width: 1117px;
@@ -2544,9 +2422,7 @@ BOTTOM
     margin: auto;
 }
 
-/*==============================
-LEFT - LARGE IMAGE
-==============================*/
+
 
 .usp-left {
     flex: 0 0 526px;
@@ -2561,9 +2437,7 @@ LEFT - LARGE IMAGE
     display: block;
 }
 
-/*==============================
-RIGHT - SMALL IMAGES
-==============================*/
+
 
 .usp-right {
     flex: 1;
@@ -2605,9 +2479,7 @@ RIGHT - SMALL IMAGES
     max-width: 220px;
 }
 
-/*==============================
-RESPONSIVE - 1024px
-==============================*/
+
 
 @media (max-width:1024px) {
     .usp-section {
@@ -2658,9 +2530,7 @@ RESPONSIVE - 1024px
     }
 }
 
-/*==============================
-RESPONSIVE - 991px (TABLET)
-==============================*/
+
 
 @media (max-width:991px) {
     .usp-section {
@@ -2727,9 +2597,6 @@ RESPONSIVE - 991px (TABLET)
     }
 }
 
-/*==============================
-RESPONSIVE - 768px
-==============================*/
 
 @media (max-width:768px) {
     .usp-section {
@@ -2781,9 +2648,7 @@ RESPONSIVE - 768px
     }
 }
 
-/*==============================
-RESPONSIVE - 576px (MOBILE)
-==============================*/
+
 
 @media (max-width:576px) {
     .usp-section {
@@ -2835,9 +2700,7 @@ RESPONSIVE - 576px (MOBILE)
     }
 }
 
-/*==============================
-RESPONSIVE - 400px
-==============================*/
+
 
 @media (max-width:400px) {
     .usp-section {
@@ -3019,7 +2882,7 @@ RESPONSIVE - 400px
 
 }
 
-/******** Tablet ********/
+
 
 @media(max-width:991px) {
 
@@ -3085,7 +2948,7 @@ RESPONSIVE - 400px
 }
 
 
-/******** Mobile ********/
+
 
 @media(max-width:576px) {
 
@@ -3139,9 +3002,7 @@ RESPONSIVE - 400px
 
 
 
-/*==============================
-EXPERTS SECTION
-==============================*/
+
 
 .experts-section {
     width: 100%;
@@ -3481,9 +3342,7 @@ EXPERTS SECTION
     }
 }
 
-/*==============================
-MEGA MENU
-==============================*/
+
 
 .has-mega-menu {
     position: static;
@@ -3781,9 +3640,7 @@ MEGA MENU
     border-radius: 20px;
 }
 
-/*==============================
-FOOTER
-==============================*/
+
 
 .footer {
     position: relative;
@@ -4060,9 +3917,7 @@ FOOTER
     font-family: 'Lora', serif;
 }
 
-/*==============================
-RESPONSIVE - HERO PAGE 2
-==============================*/
+
 
 @media (max-width:1024px) {
     .hero-page2-container {
@@ -4156,9 +4011,7 @@ RESPONSIVE - HERO PAGE 2
     }
 }
 
-/*==============================
-FOOTER RESPONSIVE
-==============================*/
+
 
 @media (max-width:1024px) {
     .footer-left p {
