@@ -367,6 +367,7 @@ Rows
 
 .glamping-row.featured {
     width: 100%;
+    padding-right: 85px;
 }
 
 /*----------------------
@@ -538,7 +539,7 @@ Mobile
 @media(max-width:576px) {
 
     .glamping-section {
-        padding: 70px 18px;
+        padding: 45px 18px;
     }
 
     .glamping-row {
@@ -546,7 +547,7 @@ Mobile
     }
 
     .glamping-title {
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .small-title {
@@ -902,8 +903,8 @@ Button
 
     .cta-btn {
 
-        width: 200px;
-        height: 52px;
+        width: 150px;
+        height: 42px;
 
     }
 
@@ -1129,6 +1130,8 @@ Solutions
 
     .solutionSwiper .swiper-slide {
         height: auto;
+        background-color: #EDE9E1;
+        border-radius: 10px;
     }
 
     .solutions-title {
@@ -1136,6 +1139,22 @@ Solutions
         font-size: 36px;
     }
 
+}
+
+@media(max-width:768px) {
+    .solutions-title {
+        font-size: 28px;
+    }
+
+    .solutions-section {
+        padding: 30px 20px;
+    }
+
+    .solutions-desc {
+
+        max-width: 640px;
+        font-size: 13px;
+    }
 }
 
 /* Mobile */
@@ -1152,6 +1171,15 @@ Solutions
         height: 58px;
         font-size: 18px;
 
+    }
+
+    .solutions-title {
+        font-size: 22px;
+    }
+
+    .solutions-desc {
+
+        line-height: 18px;
     }
 
 }
@@ -1477,7 +1505,7 @@ MOBILE
 
     .manufacturer-section {
 
-        padding: 60px 16px;
+        padding: 40px 16px;
 
     }
 
@@ -1496,8 +1524,8 @@ MOBILE
     }
 
     .manufacturer-btn {
-        width: 145px;
-        height: 50px;
+        width: 180px;
+        height: 46px;
     }
 
     .slider-wrapper {
@@ -1531,7 +1559,7 @@ MOBILE
 
 .customize-heading {
     max-width: 850px;
-    margin: 0 auto 40px;
+    margin: 0 auto 0px;
     text-align: center;
 }
 
@@ -1723,6 +1751,11 @@ MOBILE
 
     }
 
+    .customize-enquiry-btn {
+        width: 186px;
+        height: 50px;
+    }
+
     /* Image */
 
     .mobile-customize-img {
@@ -1822,8 +1855,13 @@ SHOW BUTTONS
 
     .customize-title {
 
-        font-size: 28px;
+        font-size: 20px;
 
+    }
+
+    .customize-subtitle {
+        display: block;
+        font-size: 16px;
     }
 
     .customize-desc {
@@ -3040,7 +3078,7 @@ RESPONSIVE - 400px
 
     .gallery-section {
 
-        padding: 60px 0;
+        padding: 40px 0 50px;
     }
 
     .gallery-heading h2 {
@@ -4078,14 +4116,14 @@ RESPONSIVE - HERO PAGE 2
 
     .hero-page2-desc {
         font-size: 11px;
-        line-height: 18px;
+        line-height: 16px;
         max-width: 100%;
         padding: 0 15px;
     }
 
     .hero-page2-content {
         width: 100%;
-        padding: 0 20px;
+        padding: 15px 20px;
     }
 }
 
