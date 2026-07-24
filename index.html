@@ -564,9 +564,6 @@
         </div>
     </section>
 
-    <!-- ============================================
-    TESTIMONIALS SECTION - UPDATED WITH 6 CARDS
-    ============================================ -->
     <section class="testimonial-v2-section">
         <div class="testimonial-v2-container">
             <div class="testimonial-v2-left animate-on-scroll">
@@ -584,10 +581,8 @@
                 <img src="./images/girl-2.png" alt="" class="testimonial-v2-image animate-image">
             </div>
 
-            <!-- RIGHT SIDE - SCROLLABLE WITH 6 CARDS -->
             <div class="testimonial-v2-right-scroll">
 
-                <!-- Card 1 -->
                 <div class="testimonial-v2-card animate-on-scroll">
                     <div class="testimonial-v2-card-text animate-text">
                         Beautiful tents and tireless service from Swati Taluka.
@@ -602,7 +597,6 @@
                     </div>
                 </div>
 
-                <!-- Card 2 -->
                 <div class="testimonial-v2-card animate-on-scroll">
                     <div class="testimonial-v2-card-text animate-text">
                         Beautiful tents and tireless service from Swati Taluka.
@@ -617,7 +611,6 @@
                     </div>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="testimonial-v2-card animate-on-scroll">
                     <div class="testimonial-v2-card-text animate-text">
                         Beautiful tents and tireless service from Swati Taluka.
@@ -632,7 +625,6 @@
                     </div>
                 </div>
 
-                <!-- Card 4 -->
                 <div class="testimonial-v2-card animate-on-scroll">
                     <div class="testimonial-v2-card-text animate-text">
                         Beautiful tents and tireless service from Swati Taluka.
@@ -647,7 +639,6 @@
                     </div>
                 </div>
 
-                <!-- Card 5 - EXTRA -->
                 <div class="testimonial-v2-card animate-on-scroll">
                     <div class="testimonial-v2-card-text animate-text">
                         Amazing quality and attention to detail! The team at Indian Tent Manufacturer
@@ -660,7 +651,6 @@
                     </div>
                 </div>
 
-                <!-- Card 6 - EXTRA -->
                 <div class="testimonial-v2-card animate-on-scroll">
                     <div class="testimonial-v2-card-text animate-text">
                         We've been using Indian Tent Manufacturer's products for our events for years.
@@ -674,10 +664,8 @@
                 </div>
 
             </div>
-            <!-- END RIGHT SCROLL -->
         </div>
 
-        <!-- MOBILE/TABLET SLIDER -->
         <div class="testimonial-v2-slider-wrapper">
             <div class="swiper testimonialV2Swiper">
                 <div class="swiper-wrapper">
@@ -1037,12 +1025,10 @@
         // ============================================
         document.addEventListener('DOMContentLoaded', function() {
 
-            // Sab elements jo animate hone hain
             const animElements = document.querySelectorAll(
                 '.animate-on-scroll, .animate-heading, .animate-text, .animate-image, .animate-btn'
             );
 
-            // Pehle se visible elements ko turant visible karo
             const preloadElements = [];
             const restElements = [];
 
@@ -1056,14 +1042,12 @@
                 }
             });
 
-            // Jo visible hain unhe turant dikhao
             preloadElements.forEach((el, index) => {
                 setTimeout(() => {
                     el.classList.add('visible');
                 }, index * 30);
             });
 
-            // Baaki elements ke liye Intersection Observer
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry, index) => {
                     if (entry.isIntersecting) {
@@ -1080,7 +1064,6 @@
 
             restElements.forEach(el => observer.observe(el));
 
-            // Extra check
             setTimeout(() => {
                 document.querySelectorAll('.animate-on-scroll, .animate-heading, .animate-text, .animate-image, .animate-btn')
                     .forEach(el => {
