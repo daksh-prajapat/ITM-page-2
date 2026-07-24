@@ -57,7 +57,7 @@ header {
     align-items: center;
     flex: 1;
     position: relative;
-    z-index: 1;
+    z-index: 1002;
 }
 
 .logo img {
@@ -142,7 +142,7 @@ header {
     .logo {
         flex: 0 0 auto;
         order: 1;
-        z-index: 1;
+        z-index: 1002;
     }
 
     .nav-left {
@@ -253,14 +253,14 @@ header {
 }
 
 .hero-overlay-top {
-    opacity: 100%;
+    opacity: 28%;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 150px;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 6%, rgba(255, 255, 255, 0.811634) 76.74%, #FFFFFF 135.21%);
-    z-index: 7;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.811634) 51.74%, #FFFFFF 138.21%);
+    z-index: 47;
 }
 
 .hero-page2-content {
@@ -2164,8 +2164,8 @@ header {
 
 .gallery-btn {
     position: absolute;
-    bottom: -18%;
-    transform: translateY(-50%);
+    bottom: -13%;
+    transform: translateY(0);
     width: 52px;
     height: 52px;
     border: none;
@@ -2282,7 +2282,7 @@ header {
     }
 
     .gallery-btn {
-        bottom: -65px;
+        bottom:-48px;
         width: 40px;
         height: 40px;
         font-size: 18px;
@@ -3454,6 +3454,8 @@ header {
 }
 
 .animate-btn {
+    position: relative;
+    overflow: hidden;
     transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -3468,23 +3470,54 @@ header {
     transform: translateY(0);
 }
 
+/* ============================================
+   BUTTON HOVER - SHINING LINE (RIGHT TO LEFT)
+   ============================================ */
+
+/* Shining line overlay - right to left */
+.animate-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.3) 40%,
+            rgba(255, 255, 255, 0.6) 50%,
+            rgba(255, 255, 255, 0.3) 60%,
+            transparent 100%);
+    transition: left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Shine effect on hover - right se left */
+.animate-btn:hover::before {
+    left: 100%;
+}
+
+/* Scale + Shadow on hover */
+.animate-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Keep original hover styles for specific buttons */
 .animate-btn.cta-btn:hover {
-    transform: scale(1.05) !important;
     background: #18171C !important;
 }
 
 .animate-btn.manufacturer-btn:hover {
-    transform: scale(1.05) !important;
     background: #CBAA6A !important;
 }
 
 .animate-btn.customize-enquiry-btn:hover {
-    transform: scale(1.05) !important;
     background: #B4873A !important;
 }
 
 .animate-btn.experts-btn:hover {
-    transform: scale(1.05) !important;
     background: #3E3128 !important;
     border-color: #3E3128 !important;
     color: #fff !important;
@@ -3496,14 +3529,32 @@ header {
 
 .animate-btn.testimonial-v2-prev:hover,
 .animate-btn.testimonial-v2-next:hover {
-    transform: scale(1.05) !important;
     background: #ececff !important;
 }
 
-.footer-social .animate-btn:hover {
-    transform: scale(1.1) !important;
+.animate-btn.footer-social a:hover {
     background: #fff !important;
     color: #2f1e18 !important;
+}
+
+/* Don't apply shine to social icons (they are small) */
+.footer-social .animate-btn::before {
+    display: none;
+}
+
+/* Don't apply hover effects to logo images */
+.logo img:hover,
+.footer-logo img:hover,
+.badge img:hover {
+    transform: none !important;
+    filter: none !important;
+}
+
+/* Images - Scale + Brightness on Hover */
+img:not(.logo img):not(.footer-logo img):not(.badge img):hover {
+    transform: scale(1.04);
+    filter: brightness(1.06);
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s ease;
 }
 
 .mega-card .animate-image {
@@ -3590,67 +3641,22 @@ iframe.animate-image {
 }
 
 /* ============================================
-   HOVER ANIMATIONS - IMAGES & BUTTONS
+   FIX: GALLERY BUTTONS - OVERRIDE ANIMATION
    ============================================ */
 
-/* Images - Scale + Brightness on Hover */
-img:not(.logo img):not(.footer-logo img):not(.badge img):hover {
-    transform: scale(1.04);
-    filter: brightness(1.06);
-    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s ease;
+/* Gallery buttons ko unki original position par laao */
+.gallery-btn.animate-btn {
+    position: absolute !important;
+    overflow: visible !important;
 }
 
-/* Buttons - Scale + Shadow on Hover */
-
-a.cta-btn:hover,
-a.manufacturer-btn:hover,
-.customize-enquiry-btn:hover,
-.experts-btn:hover,
-.testimonial-v2-prev:hover,
-.testimonial-v2-next:hover,
-.footer-social a:hover {
-    transform: scale(1.05) !important;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
-    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease !important;
+/* Gallery buttons se shine effect hatao */
+.gallery-btn.animate-btn::before {
+    display: none !important;
 }
 
-/* Keep original hover styles for specific buttons */
-.cta-btn:hover {
-    background: #18171C !important;
-}
-
-.manufacturer-btn:hover {
-    background: #CBAA6A !important;
-}
-
-.customize-enquiry-btn:hover {
-    background: #B4873A !important;
-}
-
-.experts-btn:hover {
-    background: #3E3128 !important;
-    border-color: #3E3128 !important;
-    color: #fff !important;
-}
-
-.gallery-btn:hover {
+/* Gallery buttons ka hover scale hatao (sirf background change) */
+.gallery-btn.animate-btn:hover {
+    transform: none !important;
     background: #22226b !important;
-}
-
-.testimonial-v2-prev:hover,
-.testimonial-v2-next:hover {
-    background: #ececff !important;
-}
-
-.footer-social a:hover {
-    background: #fff !important;
-    color: #2f1e18 !important;
-}
-
-/* Don't apply hover to logo images */
-.logo img:hover,
-.footer-logo img:hover,
-.badge img:hover {
-    transform: none ;
-    filter: none;
 }

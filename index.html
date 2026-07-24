@@ -641,6 +641,32 @@
 
                 <div class="testimonial-v2-card animate-on-scroll">
                     <div class="testimonial-v2-card-text animate-text">
+                        Beautiful tents and tireless service from Swati Taluka.
+                        The follow-up during the process of choosing and designing
+                        the tents was always fantastic! Undoubtedly a company to
+                        recommend, capable of giving shape to the requests of its
+                        customers.
+                    </div>
+                    <div class="testimonial-v2-user">
+                        <h4 class="animate-heading">RITA PALMA</h4>
+                        <span class="animate-text">Photographer</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-v2-card animate-on-scroll">
+                    <div class="testimonial-v2-card-text animate-text">
+                        We've been using Indian Tent Manufacturer's products for our events for years.
+                        Their craftsmanship is unmatched and the customer service is exceptional.
+                        Every tent tells a story of quality and tradition.
+                    </div>
+                    <div class="testimonial-v2-user">
+                        <h4 class="animate-heading">SARAH WILLIAMS</h4>
+                        <span class="animate-text">Event Planner</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-v2-card animate-on-scroll">
+                    <div class="testimonial-v2-card-text animate-text">
                         Amazing quality and attention to detail! The team at Indian Tent Manufacturer
                         went above and beyond to create the perfect glamping experience for our resort.
                         Highly recommended for anyone looking for premium safari tents.
@@ -927,7 +953,7 @@
         const navLeft = document.getElementById('nav-menu');
         const navRight = document.getElementById('nav-right-menu');
 
-        hamburger.addEventListener('click', function() {
+        hamburger.addEventListener('click', function () {
             navLeft.classList.toggle('active');
             navRight.classList.toggle('active');
             hamburger.classList.toggle('active');
@@ -938,7 +964,7 @@
         const tabContents = document.querySelectorAll(".tab-content");
 
         menuItems.forEach(item => {
-            item.addEventListener("click", function(e) {
+            item.addEventListener("click", function (e) {
                 e.preventDefault();
                 menuItems.forEach(link => link.classList.remove("active"));
                 tabContents.forEach(tab => tab.classList.remove("active"));
@@ -1023,7 +1049,7 @@
         // ============================================
         // 🚀 IMPROVED ANIMATION - FAST LOADING
         // ============================================
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
 
             const animElements = document.querySelectorAll(
                 '.animate-on-scroll, .animate-heading, .animate-text, .animate-image, .animate-btn'
