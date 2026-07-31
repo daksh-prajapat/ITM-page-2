@@ -22,13 +22,25 @@
 
         <!-- Top Bar -->
         <div class="top-bar animate-on-scroll">
-            <p>INDIAN TENT MANUFACTURER BY</p>
+            <div class="top-bar-inner">
+                <img src="./images/top-bar-img.png" alt="Left Icon" class="top-icon top-icon-left">
+                <p>INDIAN TENT MANUFACTURER BY</p>
+                <img src="./images/top-bar-img.png" alt="Right Icon" class="top-icon top-icon-right">
+            </div>
         </div>
 
         <!-- Navbar -->
         <nav class="navbar">
 
-            <div class="nav-left" id="nav-menu">
+            <!-- Logo - Left -->
+            <div class="logo">
+                <a href="#">
+                    <img src="./images/logo.png" alt="Logo">
+                </a>
+            </div>
+
+            <!-- Nav Center -->
+            <div class="nav-center" id="nav-menu">
                 <ul>
                     <li class="has-mega-menu">
                         <a href="#">
@@ -168,27 +180,22 @@
                     <li>
                         <a href="#">Accessories <i class="fa-solid fa-angle-down"></i></a>
                     </li>
-                </ul>
-            </div>
-
-            <div class="logo">
-                <a href="#">
-                    <img src="./images/logo.png" alt="Logo">
-                </a>
-            </div>
-
-            <div class="nav-right" id="nav-right-menu">
-                <ul>
-                    <li><a href="#">About</a></li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
                     <li>
                         <a href="#">Resources <i class="fa-solid fa-angle-down"></i></a>
                     </li>
-                    <li>
-                        <a href="#">Contact us <i class="fa-solid fa-angle-down"></i></a>
-                    </li>
                 </ul>
             </div>
 
+            <!-- Nav Right - Contact & Quote Buttons -->
+            <div class="nav-right" id="nav-right-menu">
+                <a href="#" class="nav-btn contact-btn">Contact</a>
+                <a href="#" class="nav-btn quote-btn">Quote</a>
+            </div>
+
+            <!-- Hamburger (Mobile) -->
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -964,11 +971,11 @@
     <script>
         // Mobile Menu Toggle
         const hamburger = document.getElementById('hamburger');
-        const navLeft = document.getElementById('nav-menu');
+        const navCenter = document.getElementById('nav-menu');
         const navRight = document.getElementById('nav-right-menu');
 
         hamburger.addEventListener('click', function () {
-            navLeft.classList.toggle('active');
+            navCenter.classList.toggle('active');
             navRight.classList.toggle('active');
             hamburger.classList.toggle('active');
         });
