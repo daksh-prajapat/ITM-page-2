@@ -20,7 +20,6 @@
 
     <header>
 
-        <!-- Top Bar -->
         <div class="top-bar animate-on-scroll">
             <div class="top-bar-inner">
                 <img src="./images/top-bar-img.png" alt="Left Icon" class="top-icon top-icon-left">
@@ -29,17 +28,14 @@
             </div>
         </div>
 
-        <!-- Navbar -->
         <nav class="navbar">
 
-            <!-- Logo - Left -->
             <div class="logo">
                 <a href="#">
                     <img src="./images/logo.png" alt="Logo">
                 </a>
             </div>
 
-            <!-- Nav Center -->
             <div class="nav-center" id="nav-menu">
                 <ul>
                     <li class="has-mega-menu">
@@ -189,13 +185,11 @@
                 </ul>
             </div>
 
-            <!-- Nav Right - Contact & Quote Buttons -->
             <div class="nav-right" id="nav-right-menu">
                 <a href="#" class="nav-btn contact-btn">Contact</a>
                 <a href="#" class="nav-btn quote-btn">Quote</a>
             </div>
 
-            <!-- Hamburger (Mobile) -->
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -974,10 +968,23 @@
         const navCenter = document.getElementById('nav-menu');
         const navRight = document.getElementById('nav-right-menu');
 
-        hamburger.addEventListener('click', function () {
+        hamburger.addEventListener('click', function() {
             navCenter.classList.toggle('active');
             navRight.classList.toggle('active');
             hamburger.classList.toggle('active');
+        });
+
+        // Close mobile menu on outside click
+        document.addEventListener('click', function(e) {
+            const isNavOpen = navCenter.classList.contains('active') || navRight.classList.contains('active');
+            if (!isNavOpen) return;
+
+            const isClickInside = navCenter.contains(e.target) || navRight.contains(e.target) || hamburger.contains(e.target);
+            if (!isClickInside) {
+                navCenter.classList.remove('active');
+                navRight.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
         });
 
         // Mega Menu Tabs
@@ -985,7 +992,7 @@
         const tabContents = document.querySelectorAll(".tab-content");
 
         menuItems.forEach(item => {
-            item.addEventListener("click", function (e) {
+            item.addEventListener("click", function(e) {
                 e.preventDefault();
                 menuItems.forEach(link => link.classList.remove("active"));
                 tabContents.forEach(tab => tab.classList.remove("active"));
@@ -1068,9 +1075,9 @@
         });
 
         // ============================================
-        // 🚀 IMPROVED ANIMATION - FAST LOADING
+        // IMPROVED ANIMATION - FAST LOADING
         // ============================================
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
 
             const animElements = document.querySelectorAll(
                 '.animate-on-scroll, .animate-heading, .animate-text, .animate-image, .animate-btn'
