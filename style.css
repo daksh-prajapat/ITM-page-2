@@ -785,12 +785,38 @@ header {
     color: #fff;
     font-family: "Bricolage Grotesque", sans-serif;
     font-size: 16px;
+    font-weight: 600;
     text-decoration: none;
-    transition: .35s;
+    border: none;
+    cursor: pointer;
+    margin-top: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.cta-btn::before {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+    transform: scale(0);
+    transition: transform 0.6s ease;
+    border-radius: 50%;
+}
+
+.cta-btn:hover::before {
+    transform: scale(1);
 }
 
 .cta-btn:hover {
-    background: #18171C;
+    background: #b08b49;
+    border-radius: 30px 4px 30px 4px;
+    box-shadow: 0 8px 30px rgba(203, 170, 106, 0.5), inset 0 2px 20px rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
 }
 
 @media(max-width:1440px) {
@@ -1163,7 +1189,7 @@ header {
 }
 
 .manufacturer-btn {
-    width: 151px;
+    width: 211px;
     height: 56px;
     display: flex;
     align-items: center;
@@ -1172,7 +1198,38 @@ header {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
+    font-weight: 600;
     font-family: "Bricolage Grotesque", sans-serif;
+    border: none;
+    cursor: pointer;
+    margin-top: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.manufacturer-btn::before {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+    transform: scale(0);
+    transition: transform 0.6s ease;
+    border-radius: 50%;
+}
+
+.manufacturer-btn:hover::before {
+    transform: scale(1);
+}
+
+.manufacturer-btn:hover {
+    background: #b08b49;
+    border-radius: 30px 4px 30px 4px;
+    box-shadow: 0 8px 30px rgba(203, 170, 106, 0.5), inset 0 2px 20px rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
 }
 
 .manufacturer-slider {
@@ -1459,19 +1516,43 @@ header {
 }
 
 .customize-enquiry-btn {
-    width: 220px;
+    width: 211px;
     height: 56px;
     border: none;
     cursor: pointer;
-    background: #C89D53;
+    background: #CBAA6A;
     color: #fff;
-    font-size: 15px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 16px;
     font-weight: 600;
-    transition: .35s;
+    margin-top: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.customize-enquiry-btn::before {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+    transform: scale(0);
+    transition: transform 0.6s ease;
+    border-radius: 50%;
+}
+
+.customize-enquiry-btn:hover::before {
+    transform: scale(1);
 }
 
 .customize-enquiry-btn:hover {
-    background: #B4873A;
+    background: #b08b49;
+    border-radius: 30px 4px 30px 4px;
+    box-shadow: 0 8px 30px rgba(203, 170, 106, 0.5), inset 0 2px 20px rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
 }
 
 .customize-buttons {
@@ -3759,15 +3840,24 @@ header {
 }
 
 .animate-btn.cta-btn:hover {
-    background: #18171C !important;
+    background: #b08b49 !important;
+    border-radius: 30px 4px 30px 4px !important;
+    box-shadow: 0 8px 30px rgba(203, 170, 106, 0.5), inset 0 2px 20px rgba(255, 255, 255, 0.2) !important;
+    transform: translateY(-4px) !important;
 }
 
 .animate-btn.manufacturer-btn:hover {
-    background: #CBAA6A !important;
+    background: #b08b49 !important;
+    border-radius: 30px 4px 30px 4px !important;
+    box-shadow: 0 8px 30px rgba(203, 170, 106, 0.5), inset 0 2px 20px rgba(255, 255, 255, 0.2) !important;
+    transform: translateY(-4px) !important;
 }
 
 .animate-btn.customize-enquiry-btn:hover {
-    background: #B4873A !important;
+    background: #b08b49 !important;
+    border-radius: 30px 4px 30px 4px !important;
+    box-shadow: 0 8px 30px rgba(203, 170, 106, 0.5), inset 0 2px 20px rgba(255, 255, 255, 0.2) !important;
+    transform: translateY(-4px) !important;
 }
 
 .animate-btn.experts-btn:hover {
